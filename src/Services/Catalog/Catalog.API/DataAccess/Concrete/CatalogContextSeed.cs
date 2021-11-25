@@ -12,7 +12,7 @@ namespace Catalog.API.DataAccess.Concrete
             bool existProduct = productCollection.Find(p => true).Any();
             if (!existProduct)
             {
-                productCollection.InsertManyAsync(GetPreconfiguredProducts());
+                productCollection.InsertManyAsync(GetPreconfiguredProducts()); 
             }
         }
 
