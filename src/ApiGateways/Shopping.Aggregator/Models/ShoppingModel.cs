@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Shopping.Aggregator.Models;
+using System.Collections.Generic;
 
-namespace Shopping.Aggregator.Models
+namespace Shopping.Aggregator.Services.Abstract
 {
     public class ShoppingModel
     {
