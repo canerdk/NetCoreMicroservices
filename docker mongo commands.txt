@@ -1,0 +1,25 @@
+docker mongo kurulumu
+> docker pull mongo
+
+mongoyu docker üzerinde tanımlama
+> docker run -d -p 27017:27017 --name shopping-mongo mongo
+
+mongunun terminaline erişmek
+> docker exec -it shopping-mongo /bin/bash
+
+mongo ile ilgili işlemler için
+> mongo
+> show dbs (database listeleme)
+> use CatalogDb (oluşturulacak database)
+> db.createCollection('Products') (Db içinde tablo oluşturmak)
+> db.Products.insertMany([{ products array... }])
+> db.Products.find({}).pretty() (Tablo içindeki verileri listeler)
+> db.Products.remove({}) (Tablo içindeki verileri temizler)
+> show collections (Tabloları listeler)
+
+> docker-compose up --build
+> docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+> docker-compose -f docker-compose.yml -f docker-compose.override.yml down
+> docker-compose -f docker-compose.yml -f docker-compose.override.yml up --build
+
+Update-Package -ProjectName Basket.API
